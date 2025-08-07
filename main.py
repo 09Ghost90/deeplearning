@@ -16,7 +16,6 @@ import torchvision.datasets as datasets
 import torchvision.transforms as transforms
 from torchmetrics.classification import Accuracy, Precision, Recall
 
-import torchmetrics
 
 # Hiperparâmetros
 batch_size = 60
@@ -103,8 +102,8 @@ print(model)
 
 # Define Loss Function:
 criterion = nn.CrossEntropyLoss()
-# Define o Optimezer:
-optimizer = optim.Adam(model.parameters(), lr=0.001)
+# Define o Optimezer -> Cálculo 3 (∇Gradiente∇):
+optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
 
 for epoch in range(num_epochs):
     print(f"Epoch [{epoch + 1}/{num_epochs}]")
