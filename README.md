@@ -30,6 +30,6 @@ Precisão: 0.9858
 Revocação: 0.9858
 
 CNN -> Utilizando optimizer SGD:
-Acurácia: 0.9858
-Precisão: 0.9858
-Revocação: 0.9858
+Acurácia: 0.9713
+Precisão: 0.9713
+Revocação: 0.9713
