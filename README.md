@@ -23,6 +23,18 @@ predict_batch -> Inferência em várias imagens e retornar lista de classes e co
     convolução -> Pooling -> Convolução -> pooling -> fully connected
     Dropout, ReLU, MaxPooling
 
+    Classes do CIFAR-10:
+    1. airplane
+    2. automobile
+    3. bird
+    4. cat
+    5. deet
+    6. dog
+    7. frog
+    8. horse
+    9. ship
+    10. truck
+
 # Resultados
 * CNN -> Utilizando optimizer Adam: 
 Acurácia: 0.9858
@@ -33,3 +45,18 @@ CNN -> Utilizando optimizer SGD:
 Acurácia: 0.9713
 Precisão: 0.9713
 Revocação: 0.9713
+
+# Empregar CNN + Reinforcement Learning
+    CNN -> É utilizada para extrair características de imagens (feature extrator)
+    RL -> vai usar essas características como entrada para decidir ações, receber recompensas e aprender uma política ótima.
+
+# Criar o dataset para os grãos de soja
+    1. Label Studio → rotular cada grão (via bounding box + classe).
+
+    2. Detector de objetos (YOLOv8, Faster R-CNN) para automatizar localização dos grãos.
+
+    3. Classificador CNN para prever a classe do grão.
+
+    4. Avaliar métricas (acurácia, recall por classe).
+
+    5. Depois que tiver bom desempenho, integrar RL se quiser otimizar decisões no processo industrial.
